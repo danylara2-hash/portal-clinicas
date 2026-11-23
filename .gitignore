@@ -1,0 +1,9 @@
+node_modules/
+.wrangler/
+.dev.vars
+*.log
+# Nunca subir datos reales ni configuración local del exportador
+exportar/salida/
+exportar/config.json
+*.csv
+*.pbix

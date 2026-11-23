@@ -1,0 +1,10 @@
+{
+  "clinicaId": "ines-iranzo",
+  "clinicaNombre": "Clínica Dental Inés Iranzo",
+  "url": "https://portal-clinicas.danylara2.workers.dev",
+  "token": "PEGA_AQUI_EL_SUBIR_TOKEN",
+  "accessClientId": "",
+  "accessClientSecret": "",
+  "semanas": 12,
+  "anios": 3
+}

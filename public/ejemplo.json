@@ -1,0 +1,1787 @@
+{
+ "version": 1,
+ "ejemplo": true,
+ "clinica": {
+  "id": "ejemplo",
+  "nombre": "Clínica de ejemplo"
+ },
+ "generado": "2026-11-23T06:00:00",
+ "fuente": "Datos de ejemplo (no son de ninguna clínica)",
+ "fechaDatos": {
+  "texto": "Nubimed en directo (API): 23/11/2026 06:00 · Backup: 20/11/2026 · Contabilidad: 2021–2025"
+ },
+ "semanas": [
+  {
+   "inicio": "2026-11-16",
+   "texto": "Semana del 16/11 al 22/11/2026  ·  API en directo: 23/11 06:00  ·  consumo, caja y pacientes nuevos hasta el backup del 20/11",
+   "tarjetas": {
+    "produccion": 12460,
+    "ingresado": 11840,
+    "pctOcupacion": 0.804,
+    "pctFallos": 0.083,
+    "pacientesNuevos": 9
+   },
+   "indicadores": [
+    {
+     "orden": 1,
+     "mando": "T · Tesorería",
+     "indicador": "Ingresado",
+     "esta": "11.840 €",
+     "anterior": "10.950 €",
+     "varAnterior": "+8%",
+     "media": "11.200 €",
+     "varMedia": "+6%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 2,
+     "mando": "T · Tesorería",
+     "indicador": "Financiado",
+     "esta": "2.100 €",
+     "anterior": "3.400 €",
+     "varAnterior": "-38%",
+     "media": "2.650 €",
+     "varMedia": "-21%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 3,
+     "mando": "T · Tesorería",
+     "indicador": "Descuadre de caja",
+     "esta": "-12,50 €",
+     "anterior": "0,00 €",
+     "varAnterior": "-12,50 €",
+     "media": "-3,10 €",
+     "varMedia": "-9,40 €",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 4,
+     "mando": "I · Ingresos",
+     "indicador": "Producción",
+     "esta": "12.460 €",
+     "anterior": "11.020 €",
+     "varAnterior": "+13%",
+     "media": "11.900 €",
+     "varMedia": "+5%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 5,
+     "mando": "I · Ingresos",
+     "indicador": "Tratamientos realizados",
+     "esta": "94",
+     "anterior": "88",
+     "varAnterior": "+7%",
+     "media": "91",
+     "varMedia": "+3%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 6,
+     "mando": "I · Ingresos",
+     "indicador": "Ticket medio por tratamiento",
+     "esta": "133 €",
+     "anterior": "125 €",
+     "varAnterior": "+6%",
+     "media": "131 €",
+     "varMedia": "+1%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 7,
+     "mando": "M · Margen",
+     "indicador": "Consumo (laboratorio y material)",
+     "esta": "1.480 €",
+     "anterior": "1.720 €",
+     "varAnterior": "-14%",
+     "media": "1.650 €",
+     "varMedia": "-10%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 8,
+     "mando": "M · Margen",
+     "indicador": "Margen clínica",
+     "esta": "8.930 €",
+     "anterior": "7.700 €",
+     "varAnterior": "+16%",
+     "media": "8.320 €",
+     "varMedia": "+7%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 9,
+     "mando": "M · Margen",
+     "indicador": "% Margen clínica",
+     "esta": "71,7%",
+     "anterior": "69,9%",
+     "varAnterior": "+1,8 pp",
+     "media": "69,9%",
+     "varMedia": "+1,8 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 10,
+     "mando": "Ó · Ocupación",
+     "indicador": "Horas atendidas",
+     "esta": "96,5 h",
+     "anterior": "92,0 h",
+     "varAnterior": "+5%",
+     "media": "95,0 h",
+     "varMedia": "+2%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 11,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Ocupación",
+     "esta": "80,4%",
+     "anterior": "76,7%",
+     "varAnterior": "+3,7 pp",
+     "media": "79,0%",
+     "varMedia": "+1,4 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 12,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Ocupación agenda (horario)",
+     "esta": "77,6%",
+     "anterior": "74,2%",
+     "varAnterior": "+3,4 pp",
+     "media": "78,1%",
+     "varMedia": "-0,5 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 13,
+     "mando": "Ó · Ocupación",
+     "indicador": "Producción por hora",
+     "esta": "129 €",
+     "anterior": "120 €",
+     "varAnterior": "+8%",
+     "media": "125 €",
+     "varMedia": "+3%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 14,
+     "mando": "Ó · Ocupación",
+     "indicador": "Citas atendidas",
+     "esta": "118",
+     "anterior": "112",
+     "varAnterior": "+5%",
+     "media": "116",
+     "varMedia": "+2%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 15,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Fallos de cita",
+     "esta": "8,3%",
+     "anterior": "11,2%",
+     "varAnterior": "-2,9 pp",
+     "media": "9,5%",
+     "varMedia": "-1,2 pp",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 16,
+     "mando": "Ó · Ocupación",
+     "indicador": "Pacientes nuevos",
+     "esta": "9",
+     "anterior": "7",
+     "varAnterior": "+29%",
+     "media": "8",
+     "varMedia": "+12%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 17,
+     "mando": "Ó · Ocupación",
+     "indicador": "Primeras visitas",
+     "esta": "7",
+     "anterior": "6",
+     "varAnterior": "+17%",
+     "media": "7",
+     "varMedia": "+0%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 18,
+     "mando": "N · Negociación",
+     "indicador": "Presupuestos presentados",
+     "esta": "14",
+     "anterior": "17",
+     "varAnterior": "-18%",
+     "media": "15",
+     "varMedia": "-7%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 19,
+     "mando": "N · Negociación",
+     "indicador": "Importe presentado",
+     "esta": "18.300 €",
+     "anterior": "22.800 €",
+     "varAnterior": "-20%",
+     "media": "19.600 €",
+     "varMedia": "-7%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 20,
+     "mando": "N · Negociación",
+     "indicador": "% Aceptación (importe)",
+     "esta": "58,0%",
+     "anterior": "61,0%",
+     "varAnterior": "-3,0 pp",
+     "media": "62,0%",
+     "varMedia": "-4,0 pp",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    }
+   ],
+   "ultimas12": [
+    {
+     "inicio": "2026-08-31",
+     "produccion": 11200,
+     "ingresado": 10600
+    },
+    {
+     "inicio": "2026-09-07",
+     "produccion": 9800,
+     "ingresado": 10100
+    },
+    {
+     "inicio": "2026-09-14",
+     "produccion": 12100,
+     "ingresado": 11400
+    },
+    {
+     "inicio": "2026-09-21",
+     "produccion": 11600,
+     "ingresado": 12000
+    },
+    {
+     "inicio": "2026-09-28",
+     "produccion": 12900,
+     "ingresado": 11900
+    },
+    {
+     "inicio": "2026-10-05",
+     "produccion": 10400,
+     "ingresado": 10900
+    },
+    {
+     "inicio": "2026-10-12",
+     "produccion": 11700,
+     "ingresado": 10800
+    },
+    {
+     "inicio": "2026-10-19",
+     "produccion": 12200,
+     "ingresado": 11500
+    },
+    {
+     "inicio": "2026-10-26",
+     "produccion": 11300,
+     "ingresado": 11900
+    },
+    {
+     "inicio": "2026-11-02",
+     "produccion": 12800,
+     "ingresado": 11600
+    },
+    {
+     "inicio": "2026-11-09",
+     "produccion": 11000,
+     "ingresado": 11000
+    },
+    {
+     "inicio": "2026-11-16",
+     "produccion": 12500,
+     "ingresado": 11800
+    }
+   ],
+   "ocupacionPrevista": 0.74,
+   "presupuestosPendientes90": 41200,
+   "horasProximaSemana": [
+    {
+     "profesional": "Profesional A",
+     "horas": 31.5
+    },
+    {
+     "profesional": "Profesional B",
+     "horas": 22.0
+    },
+    {
+     "profesional": "Profesional C",
+     "horas": 14.5
+    },
+    {
+     "profesional": "Higienista A",
+     "horas": 18.0
+    }
+   ]
+  },
+  {
+   "inicio": "2026-11-09",
+   "texto": "Semana del 09/11 al 15/11/2026  ·  API en directo: 23/11 06:00  ·  consumo, caja y pacientes nuevos hasta el backup del 20/11",
+   "tarjetas": {
+    "produccion": 11587.800000000001,
+    "ingresado": 11011.2,
+    "pctOcupacion": 0.804,
+    "pctFallos": 0.083,
+    "pacientesNuevos": 8
+   },
+   "indicadores": [
+    {
+     "orden": 1,
+     "mando": "T · Tesorería",
+     "indicador": "Ingresado",
+     "esta": "11.011 €",
+     "anterior": "10.184 €",
+     "varAnterior": "+8%",
+     "media": "10.416 €",
+     "varMedia": "+6%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 2,
+     "mando": "T · Tesorería",
+     "indicador": "Financiado",
+     "esta": "1.953 €",
+     "anterior": "3.162 €",
+     "varAnterior": "-38%",
+     "media": "2.464 €",
+     "varMedia": "-21%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 3,
+     "mando": "T · Tesorería",
+     "indicador": "Descuadre de caja",
+     "esta": "-12,50 €",
+     "anterior": "0,00 €",
+     "varAnterior": "-12,50 €",
+     "media": "-3,10 €",
+     "varMedia": "-9,40 €",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 4,
+     "mando": "I · Ingresos",
+     "indicador": "Producción",
+     "esta": "11.588 €",
+     "anterior": "10.249 €",
+     "varAnterior": "+13%",
+     "media": "11.067 €",
+     "varMedia": "+5%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 5,
+     "mando": "I · Ingresos",
+     "indicador": "Tratamientos realizados",
+     "esta": "87",
+     "anterior": "82",
+     "varAnterior": "+7%",
+     "media": "85",
+     "varMedia": "+3%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 6,
+     "mando": "I · Ingresos",
+     "indicador": "Ticket medio por tratamiento",
+     "esta": "123 €",
+     "anterior": "116 €",
+     "varAnterior": "+6%",
+     "media": "122 €",
+     "varMedia": "+1%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 7,
+     "mando": "M · Margen",
+     "indicador": "Consumo (laboratorio y material)",
+     "esta": "1.376 €",
+     "anterior": "1.600 €",
+     "varAnterior": "-14%",
+     "media": "1.534 €",
+     "varMedia": "-10%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 8,
+     "mando": "M · Margen",
+     "indicador": "Margen clínica",
+     "esta": "8.305 €",
+     "anterior": "7.161 €",
+     "varAnterior": "+16%",
+     "media": "7.738 €",
+     "varMedia": "+7%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 9,
+     "mando": "M · Margen",
+     "indicador": "% Margen clínica",
+     "esta": "71,7%",
+     "anterior": "69,9%",
+     "varAnterior": "+1,8 pp",
+     "media": "69,9%",
+     "varMedia": "+1,8 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 10,
+     "mando": "Ó · Ocupación",
+     "indicador": "Horas atendidas",
+     "esta": "89,7 h",
+     "anterior": "85,6 h",
+     "varAnterior": "+5%",
+     "media": "88,4 h",
+     "varMedia": "+2%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 11,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Ocupación",
+     "esta": "80,4%",
+     "anterior": "76,7%",
+     "varAnterior": "+3,7 pp",
+     "media": "79,0%",
+     "varMedia": "+1,4 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 12,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Ocupación agenda (horario)",
+     "esta": "77,6%",
+     "anterior": "74,2%",
+     "varAnterior": "+3,4 pp",
+     "media": "78,1%",
+     "varMedia": "-0,5 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 13,
+     "mando": "Ó · Ocupación",
+     "indicador": "Producción por hora",
+     "esta": "120 €",
+     "anterior": "112 €",
+     "varAnterior": "+8%",
+     "media": "116 €",
+     "varMedia": "+3%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 14,
+     "mando": "Ó · Ocupación",
+     "indicador": "Citas atendidas",
+     "esta": "110",
+     "anterior": "104",
+     "varAnterior": "+5%",
+     "media": "108",
+     "varMedia": "+2%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 15,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Fallos de cita",
+     "esta": "8,3%",
+     "anterior": "11,2%",
+     "varAnterior": "-2,9 pp",
+     "media": "9,5%",
+     "varMedia": "-1,2 pp",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 16,
+     "mando": "Ó · Ocupación",
+     "indicador": "Pacientes nuevos",
+     "esta": "8",
+     "anterior": "7",
+     "varAnterior": "+29%",
+     "media": "7",
+     "varMedia": "+13%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 17,
+     "mando": "Ó · Ocupación",
+     "indicador": "Primeras visitas",
+     "esta": "7",
+     "anterior": "6",
+     "varAnterior": "+17%",
+     "media": "7",
+     "varMedia": "+0%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 18,
+     "mando": "N · Negociación",
+     "indicador": "Presupuestos presentados",
+     "esta": "13",
+     "anterior": "16",
+     "varAnterior": "-18%",
+     "media": "14",
+     "varMedia": "-7%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 19,
+     "mando": "N · Negociación",
+     "indicador": "Importe presentado",
+     "esta": "17.019 €",
+     "anterior": "21.204 €",
+     "varAnterior": "-20%",
+     "media": "18.228 €",
+     "varMedia": "-7%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 20,
+     "mando": "N · Negociación",
+     "indicador": "% Aceptación (importe)",
+     "esta": "58,0%",
+     "anterior": "61,0%",
+     "varAnterior": "-3,0 pp",
+     "media": "62,0%",
+     "varMedia": "-4,0 pp",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    }
+   ],
+   "ultimas12": [
+    {
+     "inicio": "2026-08-24",
+     "produccion": 10416,
+     "ingresado": 9858
+    },
+    {
+     "inicio": "2026-08-31",
+     "produccion": 9114,
+     "ingresado": 9393
+    },
+    {
+     "inicio": "2026-09-07",
+     "produccion": 11253,
+     "ingresado": 10602
+    },
+    {
+     "inicio": "2026-09-14",
+     "produccion": 10788,
+     "ingresado": 11160
+    },
+    {
+     "inicio": "2026-09-21",
+     "produccion": 11997,
+     "ingresado": 11067
+    },
+    {
+     "inicio": "2026-09-28",
+     "produccion": 9672,
+     "ingresado": 10137
+    },
+    {
+     "inicio": "2026-10-05",
+     "produccion": 10881,
+     "ingresado": 10044
+    },
+    {
+     "inicio": "2026-10-12",
+     "produccion": 11346,
+     "ingresado": 10695
+    },
+    {
+     "inicio": "2026-10-19",
+     "produccion": 10509,
+     "ingresado": 11067
+    },
+    {
+     "inicio": "2026-10-26",
+     "produccion": 11904,
+     "ingresado": 10788
+    },
+    {
+     "inicio": "2026-11-02",
+     "produccion": 10230,
+     "ingresado": 10230
+    },
+    {
+     "inicio": "2026-11-09",
+     "produccion": 11625,
+     "ingresado": 10974
+    }
+   ],
+   "ocupacionPrevista": 0.74,
+   "presupuestosPendientes90": 41200,
+   "horasProximaSemana": [
+    {
+     "profesional": "Profesional A",
+     "horas": 31.5
+    },
+    {
+     "profesional": "Profesional B",
+     "horas": 22.0
+    },
+    {
+     "profesional": "Profesional C",
+     "horas": 14.5
+    },
+    {
+     "profesional": "Higienista A",
+     "horas": 18.0
+    }
+   ]
+  },
+  {
+   "inicio": "2026-11-02",
+   "texto": "Semana del 02/11 al 08/11/2026  ·  API en directo: 23/11 06:00  ·  consumo, caja y pacientes nuevos hasta el backup del 20/11",
+   "tarjetas": {
+    "produccion": 13083.0,
+    "ingresado": 12432.0,
+    "pctOcupacion": 0.804,
+    "pctFallos": 0.083,
+    "pacientesNuevos": 9
+   },
+   "indicadores": [
+    {
+     "orden": 1,
+     "mando": "T · Tesorería",
+     "indicador": "Ingresado",
+     "esta": "12.432 €",
+     "anterior": "11.498 €",
+     "varAnterior": "+8%",
+     "media": "11.760 €",
+     "varMedia": "+6%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 2,
+     "mando": "T · Tesorería",
+     "indicador": "Financiado",
+     "esta": "2.205 €",
+     "anterior": "3.570 €",
+     "varAnterior": "-38%",
+     "media": "2.782 €",
+     "varMedia": "-21%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 3,
+     "mando": "T · Tesorería",
+     "indicador": "Descuadre de caja",
+     "esta": "-12,50 €",
+     "anterior": "0,00 €",
+     "varAnterior": "-12,50 €",
+     "media": "-3,10 €",
+     "varMedia": "-9,40 €",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 4,
+     "mando": "I · Ingresos",
+     "indicador": "Producción",
+     "esta": "13.083 €",
+     "anterior": "11.571 €",
+     "varAnterior": "+13%",
+     "media": "12.495 €",
+     "varMedia": "+5%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 5,
+     "mando": "I · Ingresos",
+     "indicador": "Tratamientos realizados",
+     "esta": "99",
+     "anterior": "92",
+     "varAnterior": "+7%",
+     "media": "96",
+     "varMedia": "+3%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 6,
+     "mando": "I · Ingresos",
+     "indicador": "Ticket medio por tratamiento",
+     "esta": "139 €",
+     "anterior": "131 €",
+     "varAnterior": "+6%",
+     "media": "137 €",
+     "varMedia": "+1%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 7,
+     "mando": "M · Margen",
+     "indicador": "Consumo (laboratorio y material)",
+     "esta": "1.554 €",
+     "anterior": "1.806 €",
+     "varAnterior": "-14%",
+     "media": "1.732 €",
+     "varMedia": "-10%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 8,
+     "mando": "M · Margen",
+     "indicador": "Margen clínica",
+     "esta": "9.376 €",
+     "anterior": "8.085 €",
+     "varAnterior": "+16%",
+     "media": "8.736 €",
+     "varMedia": "+7%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 9,
+     "mando": "M · Margen",
+     "indicador": "% Margen clínica",
+     "esta": "71,7%",
+     "anterior": "69,9%",
+     "varAnterior": "+1,8 pp",
+     "media": "69,9%",
+     "varMedia": "+1,8 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 10,
+     "mando": "Ó · Ocupación",
+     "indicador": "Horas atendidas",
+     "esta": "101,3 h",
+     "anterior": "96,6 h",
+     "varAnterior": "+5%",
+     "media": "99,8 h",
+     "varMedia": "+2%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 11,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Ocupación",
+     "esta": "80,4%",
+     "anterior": "76,7%",
+     "varAnterior": "+3,7 pp",
+     "media": "79,0%",
+     "varMedia": "+1,4 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 12,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Ocupación agenda (horario)",
+     "esta": "77,6%",
+     "anterior": "74,2%",
+     "varAnterior": "+3,4 pp",
+     "media": "78,1%",
+     "varMedia": "-0,5 pp",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 13,
+     "mando": "Ó · Ocupación",
+     "indicador": "Producción por hora",
+     "esta": "135 €",
+     "anterior": "126 €",
+     "varAnterior": "+8%",
+     "media": "131 €",
+     "varMedia": "+3%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 14,
+     "mando": "Ó · Ocupación",
+     "indicador": "Citas atendidas",
+     "esta": "124",
+     "anterior": "118",
+     "varAnterior": "+5%",
+     "media": "122",
+     "varMedia": "+2%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 15,
+     "mando": "Ó · Ocupación",
+     "indicador": "% Fallos de cita",
+     "esta": "8,3%",
+     "anterior": "11,2%",
+     "varAnterior": "-2,9 pp",
+     "media": "9,5%",
+     "varMedia": "-1,2 pp",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 16,
+     "mando": "Ó · Ocupación",
+     "indicador": "Pacientes nuevos",
+     "esta": "9",
+     "anterior": "7",
+     "varAnterior": "+29%",
+     "media": "8",
+     "varMedia": "+13%",
+     "tendencia": "▲ mejor",
+     "color": "#1B6659"
+    },
+    {
+     "orden": 17,
+     "mando": "Ó · Ocupación",
+     "indicador": "Primeras visitas",
+     "esta": "7",
+     "anterior": "6",
+     "varAnterior": "+17%",
+     "media": "7",
+     "varMedia": "+0%",
+     "tendencia": "● estable",
+     "color": "#5B6A70"
+    },
+    {
+     "orden": 18,
+     "mando": "N · Negociación",
+     "indicador": "Presupuestos presentados",
+     "esta": "15",
+     "anterior": "18",
+     "varAnterior": "-18%",
+     "media": "16",
+     "varMedia": "-7%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 19,
+     "mando": "N · Negociación",
+     "indicador": "Importe presentado",
+     "esta": "19.215 €",
+     "anterior": "23.940 €",
+     "varAnterior": "-20%",
+     "media": "20.580 €",
+     "varMedia": "-7%",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    },
+    {
+     "orden": 20,
+     "mando": "N · Negociación",
+     "indicador": "% Aceptación (importe)",
+     "esta": "58,0%",
+     "anterior": "61,0%",
+     "varAnterior": "-3,0 pp",
+     "media": "62,0%",
+     "varMedia": "-4,0 pp",
+     "tendencia": "▼ peor",
+     "color": "#9B4128"
+    }
+   ],
+   "ultimas12": [
+    {
+     "inicio": "2026-08-17",
+     "produccion": 11760,
+     "ingresado": 11130
+    },
+    {
+     "inicio": "2026-08-24",
+     "produccion": 10290,
+     "ingresado": 10605
+    },
+    {
+     "inicio": "2026-08-31",
+     "produccion": 12705,
+     "ingresado": 11970
+    },
+    {
+     "inicio": "2026-09-07",
+     "produccion": 12180,
+     "ingresado": 12600
+    },
+    {
+     "inicio": "2026-09-14",
+     "produccion": 13545,
+     "ingresado": 12495
+    },
+    {
+     "inicio": "2026-09-21",
+     "produccion": 10920,
+     "ingresado": 11445
+    },
+    {
+     "inicio": "2026-09-28",
+     "produccion": 12285,
+     "ingresado": 11340
+    },
+    {
+     "inicio": "2026-10-05",
+     "produccion": 12810,
+     "ingresado": 12075
+    },
+    {
+     "inicio": "2026-10-12",
+     "produccion": 11865,
+     "ingresado": 12495
+    },
+    {
+     "inicio": "2026-10-19",
+     "produccion": 13440,
+     "ingresado": 12180
+    },
+    {
+     "inicio": "2026-10-26",
+     "produccion": 11550,
+     "ingresado": 11550
+    },
+    {
+     "inicio": "2026-11-02",
+     "produccion": 13125,
+     "ingresado": 12390
+    }
+   ],
+   "ocupacionPrevista": 0.74,
+   "presupuestosPendientes90": 41200,
+   "horasProximaSemana": [
+    {
+     "profesional": "Profesional A",
+     "horas": 31.5
+    },
+    {
+     "profesional": "Profesional B",
+     "horas": 22.0
+    },
+    {
+     "profesional": "Profesional C",
+     "horas": 14.5
+    },
+    {
+     "profesional": "Higienista A",
+     "horas": 18.0
+    }
+   ]
+  }
+ ],
+ "anios": [
+  {
+   "anio": 2026,
+   "resumen": {
+    "produccion": 512430,
+    "varProduccion": 0.068,
+    "ingresado": 498910,
+    "pctFinanciado": 0.214,
+    "pctMargen": 0.709,
+    "pctOcupacion": 0.792,
+    "pctAceptacionImporte": 0.61,
+    "pacientesNuevos": 402
+   },
+   "mensual": [
+    {
+     "mes": "2026-01",
+     "produccion": 44000,
+     "produccionAA": 41000,
+     "ingresado": 42500.0
+    },
+    {
+     "mes": "2026-02",
+     "produccion": 46000,
+     "produccionAA": 44000,
+     "ingresado": 44500.0
+    },
+    {
+     "mes": "2026-03",
+     "produccion": 51000,
+     "produccionAA": 47000,
+     "ingresado": 49500.0
+    },
+    {
+     "mes": "2026-04",
+     "produccion": 47000,
+     "produccionAA": 46000,
+     "ingresado": 45500.0
+    },
+    {
+     "mes": "2026-05",
+     "produccion": 52000,
+     "produccionAA": 48000,
+     "ingresado": 50500.0
+    },
+    {
+     "mes": "2026-06",
+     "produccion": 49000,
+     "produccionAA": 47000,
+     "ingresado": 47500.0
+    },
+    {
+     "mes": "2026-07",
+     "produccion": 45000,
+     "produccionAA": 44000,
+     "ingresado": 43500.0
+    },
+    {
+     "mes": "2026-08",
+     "produccion": 31000,
+     "produccionAA": 29000,
+     "ingresado": 29500.0
+    },
+    {
+     "mes": "2026-09",
+     "produccion": 49000,
+     "produccionAA": 45000,
+     "ingresado": 47500.0
+    },
+    {
+     "mes": "2026-10",
+     "produccion": 55000,
+     "produccionAA": 50000,
+     "ingresado": 53500.0
+    },
+    {
+     "mes": "2026-11",
+     "produccion": 43000,
+     "produccionAA": 46000,
+     "ingresado": 41500.0
+    },
+    {
+     "mes": "2026-12",
+     "produccion": null,
+     "produccionAA": 44000,
+     "ingresado": null
+    }
+   ],
+   "porProfesional": [
+    {
+     "profesional": "Profesional A",
+     "produccion": 268900,
+     "consumo": 37000,
+     "liquidacion": 0,
+     "margen": 231900,
+     "pctMargen": 0.8624023800669394,
+     "horasAtendidas": 1980,
+     "produccionHora": 135.8080808080808,
+     "horasLibres": 41,
+     "pctOcupacionAgenda": 0.86
+    },
+    {
+     "profesional": "Profesional B",
+     "produccion": 121300,
+     "consumo": 21400,
+     "liquidacion": 34965,
+     "margen": 64935,
+     "pctMargen": 0.535325638911789,
+     "horasAtendidas": 980,
+     "produccionHora": 123.77551020408163,
+     "horasLibres": 118.5,
+     "pctOcupacionAgenda": 0.71
+    },
+    {
+     "profesional": "Profesional C",
+     "produccion": 84600,
+     "consumo": 15900,
+     "liquidacion": 24045,
+     "margen": 44655,
+     "pctMargen": 0.5278368794326241,
+     "horasAtendidas": 760,
+     "produccionHora": 111.3157894736842,
+     "horasLibres": 96,
+     "pctOcupacionAgenda": 0.74
+    },
+    {
+     "profesional": "Higienista A",
+     "produccion": 29400,
+     "consumo": 0,
+     "liquidacion": 0,
+     "margen": 29400,
+     "pctMargen": 1.0,
+     "horasAtendidas": 610,
+     "produccionHora": 48.19672131147541,
+     "horasLibres": 52.5,
+     "pctOcupacionAgenda": 0.83
+    },
+    {
+     "profesional": "Sin asignar",
+     "produccion": 8230,
+     "consumo": 0,
+     "liquidacion": 0,
+     "margen": 8230,
+     "pctMargen": 1.0,
+     "horasAtendidas": 0,
+     "produccionHora": null,
+     "horasLibres": 0,
+     "pctOcupacionAgenda": null
+    }
+   ],
+   "tesoreria": {
+    "ingresado": 498910,
+    "financiado": 106770,
+    "pctFinanciado": 0.214,
+    "descuadre": -48.3,
+    "cierresDescuadre": 6,
+    "porFormaPago": [
+     {
+      "nombre": "Tarjeta",
+      "importe": 246100
+     },
+     {
+      "nombre": "Financiera",
+      "importe": 106770
+     },
+     {
+      "nombre": "Transferencia",
+      "importe": 98400
+     },
+     {
+      "nombre": "Efectivo",
+      "importe": 47640
+     }
+    ],
+    "porFinanciera": [
+     {
+      "nombre": "Financiera A",
+      "importe": 71200
+     },
+     {
+      "nombre": "Financiera B",
+      "importe": 35570
+     }
+    ]
+   },
+   "ingresos": {
+    "produccion": 512430,
+    "tratamientos": 4012,
+    "ticketMedio": 128,
+    "cartera": 187300,
+    "porArea": [
+     {
+      "nombre": "General",
+      "importe": 168200
+     },
+     {
+      "nombre": "Prótesis",
+      "importe": 121900
+     },
+     {
+      "nombre": "Ortodoncia",
+      "importe": 97300
+     },
+     {
+      "nombre": "Cirugía",
+      "importe": 88600
+     },
+     {
+      "nombre": "(En blanco)",
+      "importe": 36430
+     }
+    ]
+   },
+   "margen": {
+    "consumo": 74300,
+    "pctConsumo": 0.145,
+    "liquidacion": 59010,
+    "margen": 379120,
+    "pctMargen": 0.74,
+    "produccionHora": 131
+   },
+   "ocupacion": {
+    "pctOcupacion": 0.792,
+    "pctOcupacionAgenda": 0.765,
+    "huecos7": 18.5,
+    "pctFallos": 0.094,
+    "pacientesAtendidos": 1684,
+    "pctAgendaLlena7": 0.831,
+    "horasLibres": 308,
+    "mensual": [
+     {
+      "mes": "2026-01",
+      "pctOcupacion": 0.78,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-02",
+      "pctOcupacion": 0.8,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-03",
+      "pctOcupacion": 0.82,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-04",
+      "pctOcupacion": 0.79,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-05",
+      "pctOcupacion": 0.81,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-06",
+      "pctOcupacion": 0.8,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-07",
+      "pctOcupacion": 0.77,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-08",
+      "pctOcupacion": 0.55,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-09",
+      "pctOcupacion": 0.79,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-10",
+      "pctOcupacion": 0.83,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2026-11",
+      "pctOcupacion": 0.8,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     }
+    ]
+   },
+   "negociacion": {
+    "presentados": 712,
+    "importePresentado": 853000,
+    "pctImporte": 0.61,
+    "pctNumero": 0.724,
+    "pendiente": 58900,
+    "perdido": 93400,
+    "porTramo": [
+     {
+      "tramo": "< 300 €",
+      "pctImporte": 0.84
+     },
+     {
+      "tramo": "300–1.000 €",
+      "pctImporte": 0.71
+     },
+     {
+      "tramo": "1.000–3.000 €",
+      "pctImporte": 0.58
+     },
+     {
+      "tramo": "> 3.000 €",
+      "pctImporte": 0.44
+     }
+    ],
+    "porProfesional": [
+     {
+      "profesional": "Profesional A",
+      "presentados": 402,
+      "pctImporte": 0.66
+     },
+     {
+      "profesional": "Profesional B",
+      "presentados": 188,
+      "pctImporte": 0.55
+     },
+     {
+      "profesional": "Profesional C",
+      "presentados": 97,
+      "pctImporte": 0.52
+     },
+     {
+      "profesional": "Sin asignar",
+      "presentados": 25,
+      "pctImporte": 0.4
+     }
+    ]
+   }
+  },
+  {
+   "anio": 2025,
+   "resumen": {
+    "produccion": 481684.19999999995,
+    "varProduccion": 0.068,
+    "ingresado": 468975.39999999997,
+    "pctFinanciado": 0.214,
+    "pctMargen": 0.709,
+    "pctOcupacion": 0.792,
+    "pctAceptacionImporte": 0.61,
+    "pacientesNuevos": 378
+   },
+   "mensual": [
+    {
+     "mes": "2025-01",
+     "produccion": 41360.0,
+     "produccionAA": 41000,
+     "ingresado": 39950.0
+    },
+    {
+     "mes": "2025-02",
+     "produccion": 43240.0,
+     "produccionAA": 44000,
+     "ingresado": 41830.0
+    },
+    {
+     "mes": "2025-03",
+     "produccion": 47940.0,
+     "produccionAA": 47000,
+     "ingresado": 46530.0
+    },
+    {
+     "mes": "2025-04",
+     "produccion": 44180.0,
+     "produccionAA": 46000,
+     "ingresado": 42770.0
+    },
+    {
+     "mes": "2025-05",
+     "produccion": 48880.0,
+     "produccionAA": 48000,
+     "ingresado": 47470.0
+    },
+    {
+     "mes": "2025-06",
+     "produccion": 46060.0,
+     "produccionAA": 47000,
+     "ingresado": 44650.0
+    },
+    {
+     "mes": "2025-07",
+     "produccion": 42300.0,
+     "produccionAA": 44000,
+     "ingresado": 40890.0
+    },
+    {
+     "mes": "2025-08",
+     "produccion": 29140.0,
+     "produccionAA": 29000,
+     "ingresado": 27730.0
+    },
+    {
+     "mes": "2025-09",
+     "produccion": 46060.0,
+     "produccionAA": 45000,
+     "ingresado": 44650.0
+    },
+    {
+     "mes": "2025-10",
+     "produccion": 51700.0,
+     "produccionAA": 50000,
+     "ingresado": 50290.0
+    },
+    {
+     "mes": "2025-11",
+     "produccion": 40420.0,
+     "produccionAA": 46000,
+     "ingresado": 39010.0
+    },
+    {
+     "mes": "2025-12",
+     "produccion": 41360.0,
+     "produccionAA": 44000,
+     "ingresado": 39950.0
+    }
+   ],
+   "porProfesional": [
+    {
+     "profesional": "Profesional A",
+     "produccion": 252766.0,
+     "consumo": 34780.0,
+     "liquidacion": 0.0,
+     "margen": 217986.0,
+     "pctMargen": 0.8624023800669394,
+     "horasAtendidas": 1980,
+     "produccionHora": 135.8080808080808,
+     "horasLibres": 41,
+     "pctOcupacionAgenda": 0.86
+    },
+    {
+     "profesional": "Profesional B",
+     "produccion": 114022.0,
+     "consumo": 20116.0,
+     "liquidacion": 32867.1,
+     "margen": 61038.899999999994,
+     "pctMargen": 0.535325638911789,
+     "horasAtendidas": 980,
+     "produccionHora": 123.77551020408163,
+     "horasLibres": 118.5,
+     "pctOcupacionAgenda": 0.71
+    },
+    {
+     "profesional": "Profesional C",
+     "produccion": 79524.0,
+     "consumo": 14946.0,
+     "liquidacion": 22602.3,
+     "margen": 41975.7,
+     "pctMargen": 0.5278368794326241,
+     "horasAtendidas": 760,
+     "produccionHora": 111.3157894736842,
+     "horasLibres": 96,
+     "pctOcupacionAgenda": 0.74
+    },
+    {
+     "profesional": "Higienista A",
+     "produccion": 27636.0,
+     "consumo": 0.0,
+     "liquidacion": 0.0,
+     "margen": 27636.0,
+     "pctMargen": 1.0,
+     "horasAtendidas": 610,
+     "produccionHora": 48.19672131147541,
+     "horasLibres": 52.5,
+     "pctOcupacionAgenda": 0.83
+    },
+    {
+     "profesional": "Sin asignar",
+     "produccion": 7736.2,
+     "consumo": 0.0,
+     "liquidacion": 0.0,
+     "margen": 7736.2,
+     "pctMargen": 1.0,
+     "horasAtendidas": 0,
+     "produccionHora": null,
+     "horasLibres": 0,
+     "pctOcupacionAgenda": null
+    }
+   ],
+   "tesoreria": {
+    "ingresado": 468975.39999999997,
+    "financiado": 100363.79999999999,
+    "pctFinanciado": 0.214,
+    "descuadre": -48.3,
+    "cierresDescuadre": 6,
+    "porFormaPago": [
+     {
+      "nombre": "Tarjeta",
+      "importe": 231334.0
+     },
+     {
+      "nombre": "Financiera",
+      "importe": 100363.79999999999
+     },
+     {
+      "nombre": "Transferencia",
+      "importe": 92496.0
+     },
+     {
+      "nombre": "Efectivo",
+      "importe": 44781.6
+     }
+    ],
+    "porFinanciera": [
+     {
+      "nombre": "Financiera A",
+      "importe": 66928.0
+     },
+     {
+      "nombre": "Financiera B",
+      "importe": 33435.799999999996
+     }
+    ]
+   },
+   "ingresos": {
+    "produccion": 481684.19999999995,
+    "tratamientos": 3771,
+    "ticketMedio": 128,
+    "cartera": 187300,
+    "porArea": [
+     {
+      "nombre": "General",
+      "importe": 158108.0
+     },
+     {
+      "nombre": "Prótesis",
+      "importe": 114586.0
+     },
+     {
+      "nombre": "Ortodoncia",
+      "importe": 91462.0
+     },
+     {
+      "nombre": "Cirugía",
+      "importe": 83284.0
+     },
+     {
+      "nombre": "(En blanco)",
+      "importe": 34244.2
+     }
+    ]
+   },
+   "margen": {
+    "consumo": 69842.0,
+    "pctConsumo": 0.145,
+    "liquidacion": 55469.399999999994,
+    "margen": 356372.8,
+    "pctMargen": 0.74,
+    "produccionHora": 131
+   },
+   "ocupacion": {
+    "pctOcupacion": 0.792,
+    "pctOcupacionAgenda": 0.765,
+    "huecos7": 18.5,
+    "pctFallos": 0.094,
+    "pacientesAtendidos": 1583,
+    "pctAgendaLlena7": 0.831,
+    "horasLibres": 308,
+    "mensual": [
+     {
+      "mes": "2025-01",
+      "pctOcupacion": 0.78,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-02",
+      "pctOcupacion": 0.8,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-03",
+      "pctOcupacion": 0.82,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-04",
+      "pctOcupacion": 0.79,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-05",
+      "pctOcupacion": 0.81,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-06",
+      "pctOcupacion": 0.8,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-07",
+      "pctOcupacion": 0.77,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-08",
+      "pctOcupacion": 0.55,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-09",
+      "pctOcupacion": 0.79,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-10",
+      "pctOcupacion": 0.83,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-11",
+      "pctOcupacion": 0.8,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     },
+     {
+      "mes": "2025-12",
+      "pctOcupacion": 0.78,
+      "atendidas": 420,
+      "canceladas": 30,
+      "noAcude": 13,
+      "pacientesNuevos": 36,
+      "primerasVisitas": 30
+     }
+    ]
+   },
+   "negociacion": {
+    "presentados": 669,
+    "importePresentado": 801820.0,
+    "pctImporte": 0.61,
+    "pctNumero": 0.724,
+    "pendiente": 55366.0,
+    "perdido": 87796.0,
+    "porTramo": [
+     {
+      "tramo": "< 300 €",
+      "pctImporte": 0.84
+     },
+     {
+      "tramo": "300–1.000 €",
+      "pctImporte": 0.71
+     },
+     {
+      "tramo": "1.000–3.000 €",
+      "pctImporte": 0.58
+     },
+     {
+      "tramo": "> 3.000 €",
+      "pctImporte": 0.44
+     }
+    ],
+    "porProfesional": [
+     {
+      "profesional": "Profesional A",
+      "presentados": 402,
+      "pctImporte": 0.66
+     },
+     {
+      "profesional": "Profesional B",
+      "presentados": 188,
+      "pctImporte": 0.55
+     },
+     {
+      "profesional": "Profesional C",
+      "presentados": 97,
+      "pctImporte": 0.52
+     },
+     {
+      "profesional": "Sin asignar",
+      "presentados": 25,
+      "pctImporte": 0.4
+     }
+    ]
+   }
+  }
+ ]
+}
