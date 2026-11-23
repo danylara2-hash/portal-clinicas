@@ -6,8 +6,8 @@
   "compatibility_date": "2026-11-01",
   "assets": { "directory": "./public", "binding": "ASSETS", "not_found_handling": "single-page-application" },
   // Totales de cada clínica (foto:<clinica>) y usuarios (usuario:<email>).
-  // Crear con:  npx wrangler kv namespace create DATOS   y pegar aquí el id.
-  "kv_namespaces": [{ "binding": "DATOS", "id": "PENDIENTE_CREAR" }],
+  // Sin "id": Cloudflare crea el almacén KV automáticamente en el primer despliegue.
+  "kv_namespaces": [{ "binding": "DATOS" }],
   "vars": {
     // Rellenar al configurar Cloudflare Access (Zero Trust). Mientras estén vacíos, el portal solo enseña datos de ejemplo.
     "ACCESS_TEAM_DOMAIN": "",

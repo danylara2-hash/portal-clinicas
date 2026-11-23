@@ -4,8 +4,7 @@
 
 1. Cloudflare → **Workers y Pages → Crear → Importar un repositorio** → `portal-clinicas`.
    - Comando de build: *(vacío)* · Comando de despliegue: `npx wrangler deploy`.
-2. Crear el almacén de datos: Cloudflare → **Almacenamiento y bases de datos → KV → Crear** con el nombre `portal-clinicas-datos`.
-   Copiar su **ID** y pegarlo en `wrangler.jsonc` en lugar de `PENDIENTE_CREAR`.
+2. El almacén de datos (KV) se crea solo en el primer despliegue. Lo verás en **Almacenamiento y bases de datos → KV**.
 3. Crear el secreto de subida: Worker `portal-clinicas` → **Configuración → Variables y secretos → Añadir → Secreto**
    - Nombre `SUBIR_TOKEN`, valor: una frase larga aleatoria. Guárdala también en `exportar/config.json` del portátil.
 
@@ -25,7 +24,7 @@ A partir de aquí, quien entra con un correo autorizado ve los datos reales de s
 
 ## 3. Dar de alta una persona
 
-En el KV `portal-clinicas-datos` → **Añadir entrada**:
+En el KV del portal (Almacenamiento y bases de datos → KV) → **Añadir entrada**:
 
 | Clave | Valor |
 |---|---|
