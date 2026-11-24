@@ -9,9 +9,9 @@
   // Sin "id": Cloudflare crea el almacén KV automáticamente en el primer despliegue.
   "kv_namespaces": [{ "binding": "DATOS" }],
   "vars": {
-    // Rellenar al configurar Cloudflare Access (Zero Trust). Mientras estén vacíos, el portal solo enseña datos de ejemplo.
-    "ACCESS_TEAM_DOMAIN": "",
-    "ACCESS_AUD": ""
+    // Cloudflare Access (Zero Trust). Si se vacían, el portal solo enseña datos de ejemplo.
+    "ACCESS_TEAM_DOMAIN": "dirigetuclinica.cloudflareaccess.com",
+    "ACCESS_AUD": "73fdcf6be120da9c684b1cf1f76c991eed66b9debea7be9fadeeb73e2e5fd96c"
   }
   // Secreto (nunca aquí): SUBIR_TOKEN  ->  npx wrangler secret put SUBIR_TOKEN
 }
