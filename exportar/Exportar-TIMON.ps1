@@ -62,12 +62,20 @@ if ($puertos.Count -eq 0) { Fallo "No hay ningún Power BI Desktop abierto. Abre
 # ---------------------------------------------------------------------------
 # 3. Cargar el cliente ADOMD que trae Power BI Desktop
 # ---------------------------------------------------------------------------
-$dlls = @(
-  (Join-Path $env:ProgramFiles "Microsoft Power BI Desktop\bin\Microsoft.PowerBI.AdomdClient.dll")
+# Primero, la carpeta del propio Power BI que está abierto (sirve también para la versión de Microsoft Store)
+$desdeProceso = @(Get-Process PBIDesktop, msmdsrv -ErrorAction SilentlyContinue | ForEach-Object {
+  try { $d = Split-Path -Parent $_.Path; Join-Path $d "Microsoft.PowerBI.AdomdClient.dll"; Join-Path $d "Microsoft.AnalysisServices.AdomdClient.dll" } catch {}
+})
+$dlls = $desdeProceso + @(
+  (Join-Path $env:ProgramFiles "Microsoft Power BI Desktop\bin\Microsoft.PowerBI.AdomdClient.dll"),
+  (Join-Path ${env:ProgramFiles(x86)} "Microsoft Power BI Desktop\bin\Microsoft.PowerBI.AdomdClient.dll")
 ) + @(Get-ChildItem "$env:ProgramFiles\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_*\bin\Microsoft.PowerBI.AdomdClient.dll" -ErrorAction SilentlyContinue | ForEach-Object FullName) `
   + @(Get-ChildItem "$env:windir\Microsoft.NET\assembly\GAC_MSIL\Microsoft.AnalysisServices.AdomdClient\*\Microsoft.AnalysisServices.AdomdClient.dll" -ErrorAction SilentlyContinue | ForEach-Object FullName)
 $dll = $dlls | Where-Object { $_ -and (Test-Path $_) } | Select-Object -First 1
-if (-not $dll) { Fallo "No encuentro Microsoft.PowerBI.AdomdClient.dll. ¿Está instalado Power BI Desktop?" }
+if (-not $dll) {
+  $rutas = (Get-Process PBIDesktop, msmdsrv -ErrorAction SilentlyContinue | ForEach-Object { $_.Path }) -join "; "
+  Fallo "No encuentro Microsoft.PowerBI.AdomdClient.dll. Power BI está en: $rutas"
+}
 Add-Type -Path $dll
 
 # Elegimos el modelo cuyo nombre de tabla de medidas sea el de TIMÓN
