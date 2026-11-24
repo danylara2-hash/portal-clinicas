@@ -255,7 +255,7 @@ try {
   $nota = "La frase de config.json tiene $($t.Length) caracteres"
   if ($t -match '[^\x21-\x7E]') { $nota += " y lleva tildes, ñ o espacios (mejor quitarlos)" }
   $id = ([string]$cfg.accessClientId).Trim(); $sec = ([string]$cfg.accessClientSecret).Trim()
-  $nota += ". Client ID: $($id.Length) caracteres (deben ser 39 y acabar en .access); Client Secret: $($sec.Length) (deben ser 64)"
+  $nota += ". Client ID: $($id.Length) caracteres (deben ser 39 y acabar en .access); Client Secret: $($sec.Length) caracteres"
   if ($cuerpo -match 'Cloudflare Access') { $nota = "Lo ha frenado Cloudflare Access: la llave (Client ID / Client Secret) no vale. " + $nota }
   Fallo "No se ha podido subir: $($_.Exception.Message)`nRespuesta: $cuerpo`n$nota."
 }
