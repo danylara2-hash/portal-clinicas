@@ -20,8 +20,12 @@
 [CmdletBinding()]
 param(
   [switch]$SoloArchivo,
-  [string]$Config = (Join-Path $PSScriptRoot "config.json")
+  [string]$Config = ""
 )
+
+# Carpeta del script (en PowerShell 5.1 $PSScriptRoot puede venir vacío en algunos lanzadores)
+$Carpeta = if ($PSScriptRoot) { $PSScriptRoot } else { Split-Path -Parent $MyInvocation.MyCommand.Path }
+if (-not $Config) { $Config = Join-Path $Carpeta "config.json" }
 
 $ErrorActionPreference = "Stop"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -199,7 +203,7 @@ $foto = [ordered]@{
   anios = @($anios)
 }
 $json = $foto | ConvertTo-Json -Depth 12 -Compress
-$salida = Join-Path $PSScriptRoot "salida"
+$salida = Join-Path $Carpeta "salida"
 New-Item -ItemType Directory -Force -Path $salida | Out-Null
 $archivo = Join-Path $salida ("foto-{0}-{1}.json" -f $cfg.clinicaId, (Get-Date -Format "yyyyMMdd-HHmm"))
 [System.IO.File]::WriteAllText($archivo, $json, (New-Object System.Text.UTF8Encoding($false)))
