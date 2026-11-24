@@ -205,7 +205,9 @@
         sel.innerHTML = yo.clinicas.map((c) => `<option value="${esc(c)}">${esc(c)}</option>`).join("");
         sel.hidden = false;
         sel.addEventListener("change", () => cargar(sel.value));
-        await cargar(yo.clinicas[0]);
+        const pedida = new URLSearchParams(location.search).get("clinica");
+        if (pedida && yo.clinicas.includes(pedida)) sel.value = pedida;
+        await cargar(sel.value);
       } else {
         await cargar(yo.clinicas && yo.clinicas[0]);
       }

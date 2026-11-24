@@ -18,6 +18,13 @@ JSON de totales (sin pacientes)  ──POST /api/subir──►  Worker de Cloud
 - **RGPD.** Solo salen del portátil sumas, recuentos y porcentajes. El Worker rechaza cualquier foto con campos de pacientes (`PacienteId`, DNI, teléfono, email…).
 - **Sin login verificado no hay datos reales.** Mientras Cloudflare Access no esté configurado, el portal solo enseña `public/ejemplo.json`.
 
+## Área de clientes
+
+- `/` portada: Cuadro de mando y Documentación.
+- `/panel` cuadro de mando TIMÓN (abajo, pantallas).
+- `/documentos` documentos de la clínica y comunes («Todas las clínicas»). Daniel (`"*"`) sube y borra; las clínicas solo ven y descargan. Se guardan en el KV (`doc:<clinica|comun>:<id>`, máx. 20 MB por archivo).
+- Dirección final prevista: `clientes.dirigetuclinica.es` (cuando dirigetuclinica.es pase a Cloudflare).
+
 ## Pantallas (una por hoja de Power BI)
 
 | Móvil | Hoja de Power BI | Selector |
@@ -34,7 +41,7 @@ La hoja 6 (Cuenta de resultados) no está en el móvil.
 
 ## Carpetas
 
-- `src/index.ts`: el Worker (login, `/api/datos`, `/api/yo`, `/api/subir`).
+- `src/index.ts`: el Worker (login, `/api/datos`, `/api/yo`, `/api/subir`, `/api/docs`).
 - `public/`: la web del móvil (HTML, CSS y JS sin dependencias) y `ejemplo.json`.
 - `exportar/`: script de PowerShell que exporta desde Power BI Desktop. `config.json` y `salida/` no se suben nunca.
 - `docs/contrato-datos.md`: formato del JSON y de qué medida sale cada campo.

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es" data-mode="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#FFFFFF">
+<title>Documentación · Dirige tu Clínica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/app.css">
+<link rel="stylesheet" href="/area.css">
+<script src="/tema.js"></script>
+</head>
+<body data-pagina="documentos">
+<div class="area">
+  <header class="area-top">
+    <div class="toprow">
+      <div>
+        <a class="volver" href="/">‹ Área de clientes</a>
+        <h1 class="ttl">Documentación</h1>
+      </div>
+      <div class="mode" role="group" aria-label="Tema">
+        <button type="button" data-m="light" aria-pressed="true">☀ Claro</button>
+        <button type="button" data-m="dark" aria-pressed="false">☾ Oscuro</button>
+      </div>
+    </div>
+    <p class="saludo" id="saludo"></p>
+    <select id="selClinica" class="selclinica" hidden aria-label="Clínica"></select>
+  </header>
+
+  <main class="area-body">
+    <div id="aviso" class="aviso" hidden></div>
+
+    <details class="card plegable" id="bloqueSubir" hidden>
+    <summary>＋ Subir documento</summary>
+    <form id="subir" class="subir">
+      <label>Para
+        <select name="clinica" id="subirPara"></select>
+      </label>
+      <label>Título
+        <input name="titulo" maxlength="120" placeholder="Por ejemplo: Informe semanal 16–22 nov">
+      </label>
+      <label>Categoría
+        <input name="categoria" list="cats" maxlength="40" value="Informes">
+        <datalist id="cats">
+          <option value="Informes"><option value="Manuales"><option value="Contratos"><option value="Formación"><option value="General">
+        </datalist>
+      </label>
+      <label>Archivo (PDF, Word, Excel, PowerPoint, imagen; máx. 20 MB)
+        <input type="file" name="archivo" required accept=".pdf,.docx,.xlsx,.pptx,.doc,.xls,.png,.jpg,.jpeg,.txt">
+      </label>
+      <button type="submit" class="btn">Subir</button>
+      <p class="estado" id="estadoSubir" role="status"></p>
+    </form>
+    </details>
+
+    <div id="lista"><div class="card">Cargando…</div></div>
+  </main>
+</div>
+<script src="/area.js"></script>
+</body>
+</html>

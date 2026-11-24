@@ -80,3 +80,6 @@ svg text{fill:var(--muted);font-size:9px;font-family:var(--f-body)}
 .tabs button[aria-selected="true"]{color:var(--ink)}
 .tabs button[aria-selected="true"] b{color:var(--gold)}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+.volver{display:inline-block;font-size:.72rem;color:var(--gold);text-decoration:none;font-weight:600;margin-bottom:2px}
+.volver:hover{text-decoration:underline}

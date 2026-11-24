@@ -1,0 +1,52 @@
+/* Área de clientes: portada y documentación (usa los tokens de app.css) */
+.area{max-width:640px;margin:0 auto;min-height:100%;display:flex;flex-direction:column}
+.area-top{background:var(--surface);border-bottom:1px solid var(--line);
+  padding:calc(env(safe-area-inset-top,0px) + 16px) max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
+.area-top .ttl{font-size:1.45rem}
+.marca{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-decoration:none}
+.marca:hover{color:var(--gold)}
+.saludo{margin:8px 0 0;font-size:.85rem;color:var(--muted)}
+.area-body{flex:1;padding:16px max(16px,env(safe-area-inset-right,0px)) 40px max(16px,env(safe-area-inset-left,0px));display:flex;flex-direction:column;gap:12px}
+
+.tile{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:16px;text-decoration:none;color:var(--ink);transition:border-color .15s, transform .15s}
+.tile:hover{border-color:var(--gold)}
+.tile:active{transform:scale(.99)}
+.tile:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tile-ic{flex:0 0 46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--chip);color:var(--s1)}
+.tile-tx{display:flex;flex-direction:column;gap:2px;min-width:0}
+.tile-tx b{font-family:var(--f-display);font-size:1.1rem;font-weight:600}
+.tile-tx span{font-size:.8rem;color:var(--muted)}
+.tile-go{margin-left:auto;color:var(--gold);font-size:1.5rem;line-height:1}
+.pie{font-size:.78rem;color:var(--muted);text-align:center;margin-top:8px}
+
+/* Documentación */
+.grupo{display:flex;flex-direction:column;gap:6px}
+.doc{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;background:var(--surface);
+  border-radius:12px;padding:10px 12px}
+.doc .ext{font-size:.62rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-radius:6px;padding:4px 6px;
+  background:var(--chip);color:var(--s4);min-width:40px;text-align:center}
+.doc .ext.pdf{color:var(--s3)} .doc .ext.docx,.doc .ext.doc{color:var(--s4)} .doc .ext.xlsx,.doc .ext.xls{color:var(--s1)}
+.doc a.t{color:var(--ink);font-weight:500;font-size:.9rem;text-decoration:none;overflow-wrap:anywhere}
+.doc a.t:hover{color:var(--gold);text-decoration:underline}
+.doc .m{font-size:.7rem;color:var(--muted)}
+.doc .acc{display:flex;gap:6px}
+.doc .acc a,.doc .acc button{font:inherit;font-size:.72rem;border:1px solid var(--line);background:transparent;color:var(--ink);
+  border-radius:999px;padding:3px 10px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.doc .acc button.borrar{color:var(--bad)}
+.vacio{font-size:.85rem;color:var(--muted)}
+
+.subir{display:flex;flex-direction:column;gap:10px}
+.subir h2{margin:0}
+.subir label{display:flex;flex-direction:column;gap:4px;font-size:.78rem;color:var(--muted)}
+.subir input,.subir select{font:inherit;font-size:.9rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:7px 9px}
+.subir input[type=file]{padding:6px}
+.btn{align-self:flex-start;font:inherit;font-weight:600;font-size:.88rem;border:0;border-radius:999px;padding:8px 18px;
+  background:var(--s1);color:#fff;cursor:pointer}
+.btn:disabled{opacity:.5;cursor:default}
+.estado{margin:0;font-size:.8rem;color:var(--muted)}
+.estado.err{color:var(--bad)}
+input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.plegable summary{cursor:pointer;font-weight:600;color:var(--s1);font-size:.9rem;list-style:none}
+.plegable summary::-webkit-details-marker{display:none}
+.plegable[open] summary{margin-bottom:10px}
