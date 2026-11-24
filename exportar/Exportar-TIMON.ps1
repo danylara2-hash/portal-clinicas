@@ -71,12 +71,24 @@ $dlls = $desdeProceso + @(
   (Join-Path ${env:ProgramFiles(x86)} "Microsoft Power BI Desktop\bin\Microsoft.PowerBI.AdomdClient.dll")
 ) + @(Get-ChildItem "$env:ProgramFiles\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_*\bin\Microsoft.PowerBI.AdomdClient.dll" -ErrorAction SilentlyContinue | ForEach-Object FullName) `
   + @(Get-ChildItem "$env:windir\Microsoft.NET\assembly\GAC_MSIL\Microsoft.AnalysisServices.AdomdClient\*\Microsoft.AnalysisServices.AdomdClient.dll" -ErrorAction SilentlyContinue | ForEach-Object FullName)
-$dll = $dlls | Where-Object { $_ -and (Test-Path $_) } | Select-Object -First 1
-if (-not $dll) {
+$candidatas = @($dlls | Where-Object { $_ -and (Test-Path $_) } | Select-Object -Unique)
+if ($candidatas.Count -eq 0) {
   $rutas = (Get-Process PBIDesktop, msmdsrv -ErrorAction SilentlyContinue | ForEach-Object { $_.Path }) -join "; "
   Fallo "No encuentro Microsoft.PowerBI.AdomdClient.dll. Power BI está en: $rutas"
 }
-Add-Type -Path $dll
+# LoadFrom (no Add-Type): carga la DLL y sus dependencias desde su propia carpeta
+$cargada = $false; $errores = @()
+foreach ($dll in $candidatas) {
+  try {
+    $asm = [System.Reflection.Assembly]::LoadFrom($dll)
+    if ($asm.GetType("Microsoft.AnalysisServices.AdomdClient.AdomdConnection", $true)) { $cargada = $true; break }
+  } catch {
+    $e = $_.Exception; while ($e.InnerException) { $e = $e.InnerException }
+    $det = if ($e -is [System.Reflection.ReflectionTypeLoadException]) { ($e.LoaderExceptions | Select-Object -First 3 | ForEach-Object Message) -join " | " } else { $e.Message }
+    $errores += "$dll -> $det"
+  }
+}
+if (-not $cargada) { Fallo ("No puedo cargar el cliente de Power BI:`n" + ($errores -join "`n")) }
 
 # Elegimos el modelo cuyo nombre de tabla de medidas sea el de TIMÓN
 $cn = $null
