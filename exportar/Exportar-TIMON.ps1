@@ -246,5 +246,13 @@ try {
     -ContentType "application/json; charset=utf-8" -Body ([System.Text.Encoding]::UTF8.GetBytes($json))
   Write-Host ("✓ Subido: {0} · {1} semanas · {2} años" -f $res.clinica, $res.semanas, $res.anios) -ForegroundColor Green
 } catch {
-  Fallo "No se ha podido subir: $($_.Exception.Message)"
+  $cuerpo = $_.ErrorDetails.Message
+  if (-not $cuerpo -and $_.Exception.Response) {
+    try { $cuerpo = (New-Object System.IO.StreamReader($_.Exception.Response.GetResponseStream())).ReadToEnd() } catch {}
+  }
+  if ($cuerpo -and $cuerpo.Length -gt 300) { $cuerpo = $cuerpo.Substring(0, 300) }
+  $t = ([string]$cfg.token).Trim()
+  $nota = "La frase de config.json tiene $($t.Length) caracteres"
+  if ($t -match '[^\x21-\x7E]') { $nota += " y lleva tildes, ñ o espacios (mejor quitarlos)" }
+  Fallo "No se ha podido subir: $($_.Exception.Message)`nRespuesta: $cuerpo`n$nota."
 }
