@@ -89,7 +89,7 @@ async function yo(req: Request, env: Env): Promise<Response> {
 async function subir(req: Request, env: Env): Promise<Response> {
   if (!env.SUBIR_TOKEN) return json({ error: "Falta configurar SUBIR_TOKEN." }, 503);
   const auth = req.headers.get("authorization") ?? "";
-  if (!igualSeguro(auth, `Bearer ${env.SUBIR_TOKEN}`)) return json({ error: "Token no válido." }, 401);
+  if (!igualSeguro(auth.trim(), `Bearer ${env.SUBIR_TOKEN.trim()}`)) return json({ error: "Token no válido." }, 401);
 
   const largo = Number(req.headers.get("content-length") ?? "0");
   if (largo > MAX_SUBIDA) return json({ error: "Archivo demasiado grande." }, 413);

@@ -239,8 +239,8 @@ if ($SoloArchivo) { Write-Host "✓ Listo (no se ha subido: -SoloArchivo)." -For
 if (-not $cfg.url -or -not $cfg.token) { Fallo "Faltan url o token en config.json para subir al portal." }
 
 Paso "Subiendo al portal…"
-$headers = @{ Authorization = "Bearer $($cfg.token)" }
-if ($cfg.accessClientId) { $headers["CF-Access-Client-Id"] = $cfg.accessClientId; $headers["CF-Access-Client-Secret"] = $cfg.accessClientSecret }
+$headers = @{ Authorization = "Bearer $(([string]$cfg.token).Trim())" }
+if ($cfg.accessClientId) { $headers["CF-Access-Client-Id"] = ([string]$cfg.accessClientId).Trim(); $headers["CF-Access-Client-Secret"] = ([string]$cfg.accessClientSecret).Trim() }
 try {
   $res = Invoke-RestMethod -Method Post -Uri ($cfg.url.TrimEnd('/') + "/api/subir") -Headers $headers `
     -ContentType "application/json; charset=utf-8" -Body ([System.Text.Encoding]::UTF8.GetBytes($json))
