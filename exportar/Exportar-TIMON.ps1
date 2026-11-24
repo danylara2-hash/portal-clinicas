@@ -91,17 +91,23 @@ foreach ($dll in $candidatas) {
 if (-not $cargada) { Fallo ("No puedo cargar el cliente de Power BI:`n" + ($errores -join "`n")) }
 
 # Elegimos el modelo cuyo nombre de tabla de medidas sea el de TIMÓN
-$cn = $null
+$cn = $null; $motivos = @()
 foreach ($p in $puertos) {
+  $c = $null
   try {
     $c = New-Object Microsoft.AnalysisServices.AdomdClient.AdomdConnection("Data Source=localhost:$($p.Puerto)")
     $c.Open()
+    # ADOMD no admite ExecuteScalar: se lee con ExecuteReader
     $cmd = $c.CreateCommand(); $cmd.CommandText = "EVALUATE ROW(""x"", COUNTROWS(Dim_Indicador_Semanal))"
-    [void]$cmd.ExecuteScalar()
+    $r = $cmd.ExecuteReader(); [void]$r.Read(); $r.Close()
     $cn = $c; break
-  } catch { if ($c) { $c.Dispose() } }
+  } catch {
+    $e = $_.Exception; while ($e.InnerException) { $e = $e.InnerException }
+    $motivos += "puerto $($p.Puerto): $($e.Message)"
+    if ($c) { $c.Dispose() }
+  }
 }
-if (-not $cn) { Fallo "El Power BI abierto no es un TIMÓN (no tiene Dim_Indicador_Semanal)." }
+if (-not $cn) { Fallo ("No consigo leer el TIMÓN abierto en Power BI:`n" + ($motivos -join "`n")) }
 Paso "Conectado al modelo TIMÓN (puerto local)."
 
 function Q([string]$dax) {
